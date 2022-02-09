@@ -12,6 +12,8 @@ class GuardianSectionController extends Controller
     public function getAll()
     {
         try{
+            $this->checkCacheHasEmptyValue('guardian-sections');
+
             return Cache::remember('guardian-sections',10*60,function(){
                 return (new GuardianSection())->doRequest();
             });

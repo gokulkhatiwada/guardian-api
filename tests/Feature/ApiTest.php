@@ -17,4 +17,10 @@ class ApiTest extends TestCase
         $response->assertStatus(200);
         $response->assertJsonCount(10);
     }
+
+    public function test_sections()
+    {
+        $response = $this->get('/api/sections');
+        $response->assertStatus(503);
+    }
 }
