@@ -57,10 +57,11 @@
 
                 <div class="row">
                   <div class="col-4">
+                    Click on the list to view log files of respective date
                     <ul class="list-group">
                       @forelse($directories as $directory)
 
-                        <li class="list-group-item directory" data-url="{{ $directory }}">{{ basename($directory) }}</li>
+                        <li class="list-group-item directory " data-url="{{ $directory }}">{{ basename($directory) }}</li>
                       @empty
                         <li class="list-group-item" >No Logs Found</li>
                       @endforelse
@@ -109,7 +110,7 @@
             success:function (response) {
                 $('.file-list').text('');
 
-                var html = '<ul class="list-group">';
+                var html = '<p>Click on the filename to view content</p><ul class="list-group">';
                 response.forEach(function(item){
                     var filename = getFileName(item);
                     html += `<li class="list-group-item file" data-path=${item}>${filename}</li>`

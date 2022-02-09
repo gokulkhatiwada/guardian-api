@@ -1,7 +1,7 @@
 
 ## Guardian API Portal
 
-Build to demonstrate the consuming of Guardian API 
+Built to demonstrate the consuming of Guardian API 
 
 
 ## Setup
@@ -34,7 +34,16 @@ npm install && run dev
 ```
 
 Start your application and head to the url /auth/login.
-Configure application settings and API credentials.
+Configure application settings in Settings section and API credentials in API Credentials.
+Base url of API credentials should be 
+``` 
+https://content.guardianapis.com/
+```
+All the log files of API request and response can be found under API Logs section according to date
+
+
+
+
 
 
  
